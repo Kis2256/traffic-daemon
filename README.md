@@ -2,6 +2,7 @@ To start working with the daemon, first perform the following steps in bash:
 1) git clone https://github.com/Kis2256/traffic-daemon
 2) cd traffic-daemon
 3) ./enter
+   
 After that, the daemon is ready to work.
 
 Commands for using the traffic daemon (use ./cli before the command):
