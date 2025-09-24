@@ -15,5 +15,3 @@ Commands for using the traffic daemon (use ./cli before the command):
 
 
 
-
-Translated with DeepL.com (free version)
