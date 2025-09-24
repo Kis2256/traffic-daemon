@@ -11,10 +11,9 @@
 
 static void handle_client(int fd){
     char buf[256];
+    ssize_t r=read(fd,buf,sizeof(buf)-1);
     buf[r]=0;
     char *nl=strchr(buf,'\n');
-
-    ssize_t r=read(fd,buf,sizeof(buf)-1);
     if(r<=0)
     {
         close(fd);
