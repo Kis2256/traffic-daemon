@@ -1,0 +1,18 @@
+
+set -e
+
+
+IMAGE_NAME="traffic-daemon"
+
+
+docker build -t $IMAGE_NAME .
+
+
+docker run -it --rm \
+  --net=host \
+  --cap-add=NET_RAW \
+  --cap-add=NET_ADMIN \
+  -v $(pwd)/build/data:/var/lib/ipstat \
+  -w /app/build \
+  $IMAGE_NAME \
+  /bin/bash
